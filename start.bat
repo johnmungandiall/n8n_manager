@@ -67,8 +67,11 @@ echo.
 
 REM Step 4: Set environment variables for n8n
 echo Setting n8n environment variables...
+set "N8N_USER_FOLDER=%~dp0"
 set "WEBHOOK_TUNNEL_URL=%WEBHOOK_URL%"
+set "N8N_RUNNERS_ENABLED=true"
 echo Webhook URL set to: %WEBHOOK_TUNNEL_URL%
+echo n8n data will be stored in: %N8N_USER_FOLDER%
 echo.
 
 REM Step 5: Start n8n
